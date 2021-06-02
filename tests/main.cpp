@@ -1,6 +1,6 @@
 #include "m.h"
-#include "rp.h"
-#include "mnwbf.h"
+#include "rc.h"
+#include "mwbb.h"
 #include "showlenght.h"
 #include "text.h"
 #include "_text.h"
