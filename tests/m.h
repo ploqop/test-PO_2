@@ -42,15 +42,15 @@ TEST(m, non_existent)
 
     m(txt, 100, 0);
     EXPECT_EQ(txt->cursor->line_num, 0);
-    EXPECT_EQ(txt->cursor->position, 12);
+    EXPECT_EQ(txt->cursor->position, 0);
 
     m(txt, 0, 100);
     EXPECT_EQ(txt->cursor->line_num, 0);
-    EXPECT_EQ(txt->cursor->position, 0);
+    EXPECT_EQ(txt->cursor->position, 12);
 
     m(txt, 100, 100);
     EXPECT_EQ(txt->cursor->line_num, 0);
-    EXPECT_EQ(txt->cursor->position, 0);
+    EXPECT_EQ(txt->cursor->position, 12);
 
     free(txt);
 }
