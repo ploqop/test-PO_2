@@ -86,22 +86,12 @@ int main()
             }
             continue;
         }
-                if (strcmp(cmd, "mnwbf") == 0) {
-                    mnwbf(txt);
-                    continue;
-                }
+
                 if (strcmp(cmd, "mwbb") == 0) {
-                    mnwbf(txt);
+                    mwbb(txt);
                     continue;
                 }
-                if (strcmp(cmd, "rc") == 0) {
-                    rc(txt);
-                    continue;
-                }
-                if (strcmp(cmd, "rp") == 0) {
-                    rp(txt);
-                    continue;
-                }
+
                 if (strcmp(cmd, "showlenght") == 0) {
                     showlenght(txt);
                     continue;
