@@ -5,23 +5,23 @@
 #include "text.h"
 #include "_text.h"
 
-TEST(showlenght, norm)
+TEST(showlenght, normal)
 {
     text txt = create_text();
 
-    append_line(txt, "line \n");
-    append_line(txt, "line 2\n");
-    append_line(txt, "line 22\n");
+    append_line(txt, "5555\n");
+    append_line(txt, "777777\n");
+    append_line(txt, "99999999\n");
 
     std::string output_text = "";
 
-    output_text += "6";
+    output_text += "5";
     output_text += "7";
-    output_text += "8";
+    output_text += "9";
 
     testing::internal::CaptureStdout();
 
-    m(txt, 0, 1);
+    m(txt, 0, 0);
     showlenght(txt);
 
     std::string text = testing::internal::GetCapturedStdout();
@@ -29,7 +29,7 @@ TEST(showlenght, norm)
     EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
 
-TEST(showlenght, zero)
+TEST(showlenght, empty)
 {
      text txt = create_text();
 
@@ -45,11 +45,10 @@ TEST(showlenght, zero)
 
      testing::internal::CaptureStdout();
 
-     m(txt, 0, 1);
+     m(txt, 0, 0);
      showlenght(txt);
 
      std::string text = testing::internal::GetCapturedStdout();
 
      EXPECT_STREQ(text.c_str(), output_text.c_str());
 }
-

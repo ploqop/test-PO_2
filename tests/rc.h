@@ -9,14 +9,14 @@ TEST(rc, zero_line)
 {
     text txt = create_text();
 
-    append_line(txt, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n");
-    append_line(txt, "Aenean sollicitudin magna in metus convallis, vitae dignissim augue tincidunt.\n");
-    append_line(txt, "Duis eleifend diam venenatis, ultrices ligula id, ultrices erat.\n");
+    append_line(txt, "test line 1\n");
+    append_line(txt, "test line 2\n");
+    append_line(txt, "test line 3\n");
 
     std::string output_text = "";
 
-    output_text += "|Aenean sollicitudin magna in metus convallis, vitae dignissim augue tincidunt.\n";
-    output_text += "Duis eleifend diam venenatis, ultrices ligula id, ultrices erat.\n";
+    output_text += "|test line 2\n";
+    output_text += "test line 3\n";
 
     testing::internal::CaptureStdout();
 
@@ -33,14 +33,14 @@ TEST(rc, first_line)
 {
     text txt = create_text();
 
-    append_line(txt, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n");
-    append_line(txt, "Aenean sollicitudin magna in metus convallis, vitae dignissim augue tincidunt.\n");
-    append_line(txt, "Duis eleifend diam venenatis, ultrices ligula id, ultrices erat.\n");
+    append_line(txt, "test line 1\n");
+    append_line(txt, "test line 2\n");
+    append_line(txt, "test line 3\n");
 
     std::string output_text = "";
 
-    output_text += "|Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n";
-    output_text += "Duis eleifend diam venenatis, ultrices ligula id, ultrices erat.\n";
+    output_text += "|test line 1\n";
+    output_text += "test line 3\n";
 
     testing::internal::CaptureStdout();
 
@@ -57,14 +57,14 @@ TEST(rc, second_line)
 {
     text txt = create_text();
 
-    append_line(txt, "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n");
-    append_line(txt, "Aenean sollicitudin magna in metus convallis, vitae dignissim augue tincidunt.\n");
-    append_line(txt, "Duis eleifend diam venenatis, ultrices ligula id, ultrices erat.\n");
+    append_line(txt, "test line 1\n");
+    append_line(txt, "test line 2\n");
+    append_line(txt, "test line 3\n");
 
     std::string output_text = "";
 
-    output_text += "|Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n";
-    output_text += "Aenean sollicitudin magna in metus convallis, vitae dignissim augue tincidunt.\n";
+    output_text += "|test line 1\n";
+    output_text += "test line 2\n";
 
     testing::internal::CaptureStdout();
 
