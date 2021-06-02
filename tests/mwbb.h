@@ -115,7 +115,7 @@ TEST(mwbb, on_point)
 
     std::string output_text = "";
 
-    output_text += "test line. 1\n";
+    output_text += "test line|. 1\n";
     output_text += "test line 2\n";
     output_text += "test line 3\n";
 

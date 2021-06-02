@@ -13,9 +13,9 @@ TEST(save, line)
 {
     text txt = create_text();
 
-    append_line(txt, "test line 1\n");
-    append_line(txt, "test line 2\n");
-    append_line(txt, "test line 3\n");
+    append_line(txt, "test line 1");
+    append_line(txt, "test line 2");
+    append_line(txt, "test line 3");
 
     save(txt, "save.test.txt");
 
